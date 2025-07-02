@@ -1,0 +1,48 @@
+classDiagram
+  class Game {
+    -Player[2] players
+    -Board board
+    +start()
+    +movePiece()
+    +isGameOver()
+  }
+  class Player {
+    -String name
+    -String color
+    +makeMove()
+  }
+  class Board {
+    -Piece[9][10] grid
+    +getPieceAt()
+    +setPieceAt()
+    +isLegalMove()
+  }
+  class Piece {
+    -String color
+    -Position position
+    +isLegalMove()
+  }
+  class General
+  class Guard
+  class Rook
+  class Horse
+  class Cannon
+  class Elephant
+  class Soldier
+  class Move {
+    -Piece piece
+    -Position from
+    -Position to
+    +execute()
+  }
+  Game "1" o-- "2" Player
+  Game "1" o-- "1" Board
+  Board "1" o-- "*" Piece
+  Piece <|-- General
+  Piece <|-- Guard
+  Piece <|-- Rook
+  Piece <|-- Horse
+  Piece <|-- Cannon
+  Piece <|-- Elephant
+  Piece <|-- Soldier
+  Move "1" o-- "1" Piece 
