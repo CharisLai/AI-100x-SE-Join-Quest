@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.example.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.151 s <<< FAILURE! - in org.example.RunCucumberTest
-Double 11 Discount Promotion.Buying 1 unit each of 10 different products (A to J), each priced at $100  Time elapsed: 0.082 s  <<< ERROR!
-io.cucumber.java.PendingException: TODO: implement me
-	at org.example.Double11StepDefs.no_discount_should_be_applied(Double11StepDefs.java:83)
-	at ✽.no discount should be applied(classpath:double11.feature:21)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 s - in org.example.RunCucumberTest

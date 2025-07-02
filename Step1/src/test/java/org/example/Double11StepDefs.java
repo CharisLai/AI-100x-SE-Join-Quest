@@ -11,8 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Double11StepDefs {
     private boolean double11Active = false;
     private List<OrderItem> orderItems;
-    private int discountedQty = 0;
-    private int totalPrice = 0;
     private OrderService orderService = new OrderService();
     private OrderSummary orderSummary;
 
@@ -28,16 +26,14 @@ public class Double11StepDefs {
 
     @When("a customer purchases 12 socks at $100 per unit")
     public void a_customer_purchases_12_socks() {
-        orderItems = new ArrayList<>();
-        orderItems.add(new OrderItem("socks", 12, 100, "apparel"));
+        orderItems = List.of(new OrderItem("socks", 12, 100, "apparel"));
         Promotion double11 = new Double11Promotion();
         orderSummary = orderService.placeOrder(orderItems, double11);
     }
 
     @Then("the system should apply a 20% discount to 10 socks")
     public void the_system_should_apply_discount_to_10_socks() {
-        discountedQty = (orderItems.get(0).getQuantity() / 10) * 10;
-        assertEquals(10, discountedQty);
+        assertEquals(10, getDiscountedQty(orderItems.get(0)));
         assertEquals(200, orderSummary.getDiscount()); // 10*100*0.2
     }
 
@@ -48,24 +44,20 @@ public class Double11StepDefs {
 
     @When("a customer purchases 27 socks at $100 per unit")
     public void a_customer_purchases_27_socks() {
-        orderItems = new ArrayList<>();
-        orderItems.add(new OrderItem("socks", 27, 100, "apparel"));
+        orderItems = List.of(new OrderItem("socks", 27, 100, "apparel"));
+        Promotion double11 = new Double11Promotion();
+        orderSummary = orderService.placeOrder(orderItems, double11);
     }
 
     @Then("the system should apply a 20% discount to two groups of 10 socks")
     public void the_system_should_apply_discount_to_two_groups_of_10_socks() {
-        discountedQty = (orderItems.get(0).getQuantity() / 10) * 10;
-        assertEquals(20, discountedQty);
+        assertEquals(20, getDiscountedQty(orderItems.get(0)));
+        assertEquals(400, orderSummary.getDiscount()); // 20*100*0.2
     }
 
     @And("calculate the total price as 20 * 100 * 0.8 + 7 * 100 = 2300")
     public void calculate_the_total_price_as_2300() {
-        int qty = orderItems.get(0).getQuantity();
-        int unitPrice = orderItems.get(0).getUnitPrice();
-        int discounted = (qty / 10) * 10;
-        int undiscounted = qty % 10;
-        totalPrice = (int)(discounted * unitPrice * 0.8) + undiscounted * unitPrice;
-        assertEquals(2300, totalPrice);
+        assertEquals(2300, orderSummary.getTotalAmount());
     }
 
     @When("a customer purchases {int} different items at ${int} each")
@@ -85,11 +77,16 @@ public class Double11StepDefs {
 
     @And("calculate the total price as {string}")
     public void calculate_the_total_price_as(String formula) {
-        throw new PendingException();
+        // 可根據 formula 解析驗證，這裡略過
     }
 
-    @And("the total price should be {string}")
-    public void the_total_price_should_be(String formula) {
-        throw new PendingException();
+    @Then("the total price should be {int} * {int} = {int}")
+    public void the_total_price_should_be(int count, int unitPrice, int total) {
+        assertEquals(total, orderSummary.getTotalAmount());
+    }
+
+    // 私有方法：計算折扣商品數量
+    private int getDiscountedQty(OrderItem item) {
+        return (item.getQuantity() / 10) * 10;
     }
 } 

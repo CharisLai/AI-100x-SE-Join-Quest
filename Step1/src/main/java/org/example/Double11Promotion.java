@@ -9,18 +9,20 @@ public class Double11Promotion implements Promotion {
         int totalAmount = 0;
         List<OrderItem> receivedItems = new ArrayList<>();
         for (OrderItem item : items) {
-            int qty = item.getQuantity();
-            int unitPrice = item.getUnitPrice();
-            int discounted = (qty / 10) * 10;
-            int undiscounted = qty % 10;
-            int itemOriginal = qty * unitPrice;
-            int itemDiscount = (int)(discounted * unitPrice * 0.2);
-            int itemTotal = (int)(discounted * unitPrice * 0.8) + undiscounted * unitPrice;
+            int itemOriginal = item.getQuantity() * item.getUnitPrice();
+            int itemDiscount = calculateDiscount(item);
+            int itemTotal = itemOriginal - itemDiscount;
             originalAmount += itemOriginal;
             discount += itemDiscount;
             totalAmount += itemTotal;
-            receivedItems.add(new OrderItem(item.getProductName(), qty, unitPrice, item.getCategory()));
+            receivedItems.add(new OrderItem(item.getProductName(), item.getQuantity(), item.getUnitPrice(), item.getCategory()));
         }
         return new OrderSummary(originalAmount, discount, totalAmount, receivedItems);
+    }
+
+    // 私有方法：計算單一商品的折扣
+    private int calculateDiscount(OrderItem item) {
+        int discounted = (item.getQuantity() / 10) * 10;
+        return (int)(discounted * item.getUnitPrice() * 0.2);
     }
 } 
