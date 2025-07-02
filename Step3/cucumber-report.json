@@ -1,0 +1,1503 @@
+[
+  {
+    "description": "  As a player\n\n  I want to follow standard Chinese Chess rules\n\n  So that I can play the game correctly\n\n\n\n  We use (row, col) to indicate positions on a 9×10 board.\n\n  Row 1 is Red's bottom row; Row 10 is Black's top row.\n\n  Column 1 is the leftmost column from Red's perspective.\n\n  \n\n  Each scenario sets up minimal conditions with relevant pieces.",
+    "elements": [
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-general-within-the-palace-(legal)",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Red moves the General within the palace (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "the board is empty except for a Red General at (1, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1235300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "Red moves the General from (1, 5) to (1, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 228900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@General",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-general-outside-the-palace-(illegal)",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Red moves the General outside the palace (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 45,
+            "name": "the board is empty except for a Red General at (1, 6)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 140600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "Red moves the General from (1, 6) to (1, 7)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 954000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@General",
+            "line": 41
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-general-tries-to-move-diagonally-(illegal)",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "Red General tries to move diagonally (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "the board is empty except for a Red General at (2, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "Red moves the General from (2, 5) to (3, 6)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@General",
+            "line": 53
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;generals-face-each-other-on-the-same-file-(illegal)",
+        "keyword": "Scenario",
+        "line": 67,
+        "name": "Generals face each other on the same file (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red General",
+                      "(2, 4)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black General",
+                      "(8, 5)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 69,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 77,
+            "name": "Red moves the General from (2, 4) to (2, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 79,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@General",
+            "line": 65
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-guard-diagonally-in-the-palace-(legal)",
+        "keyword": "Scenario",
+        "line": 91,
+        "name": "Red moves the Guard diagonally in the palace (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 93,
+            "name": "the board is empty except for a Red Guard at (1, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "Red moves the Guard from (1, 4) to (2, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Guard",
+            "line": 89
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-guard-straight-(illegal)",
+        "keyword": "Scenario",
+        "line": 103,
+        "name": "Red moves the Guard straight (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 105,
+            "name": "the board is empty except for a Red Guard at (2, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 107,
+            "name": "Red moves the Guard from (2, 5) to (2, 6)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 109,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Guard",
+            "line": 101
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-rook-along-a-clear-rank-(legal)",
+        "keyword": "Scenario",
+        "line": 121,
+        "name": "Red moves the Rook along a clear rank (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 123,
+            "name": "the board is empty except for a Red Rook at (4, 1)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 125,
+            "name": "Red moves the Rook from (4, 1) to (4, 9)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 127,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Rook",
+            "line": 119
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-rook-and-attempts-to-jump-over-a-piece-(illegal)",
+        "keyword": "Scenario",
+        "line": 133,
+        "name": "Red moves the Rook and attempts to jump over a piece (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Rook",
+                      "(4, 1)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Soldier",
+                      "(4, 5)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 135,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 143,
+            "name": "Red moves the Rook from (4, 1) to (4, 9)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 145,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Rook",
+            "line": 131
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-horse-in-an-\"l\"-shape-with-no-block-(legal)",
+        "keyword": "Scenario",
+        "line": 157,
+        "name": "Red moves the Horse in an \"L\" shape with no block (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 159,
+            "name": "the board is empty except for a Red Horse at (3, 3)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 161,
+            "name": "Red moves the Horse from (3, 3) to (5, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 163,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Horse",
+            "line": 155
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-horse-and-it-is-blocked-by-an-adjacent-piece-(illegal)",
+        "keyword": "Scenario",
+        "line": 169,
+        "name": "Red moves the Horse and it is blocked by an adjacent piece (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Horse",
+                      "(3, 3)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Rook",
+                      "(4, 3)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 171,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 179,
+            "name": "Red moves the Horse from (3, 3) to (5, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 181,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Horse",
+            "line": 167
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-cannon-like-a-rook-with-an-empty-path-(legal)",
+        "keyword": "Scenario",
+        "line": 193,
+        "name": "Red moves the Cannon like a Rook with an empty path (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 195,
+            "name": "the board is empty except for a Red Cannon at (6, 2)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 197,
+            "name": "Red moves the Cannon from (6, 2) to (6, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cannon",
+            "line": 191
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-cannon-and-jumps-exactly-one-screen-to-capture-(legal)",
+        "keyword": "Scenario",
+        "line": 205,
+        "name": "Red moves the Cannon and jumps exactly one screen to capture (Legal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Cannon",
+                      "(6, 2)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Soldier",
+                      "(6, 5)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Guard",
+                      "(6, 8)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 207,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 217,
+            "name": "Red moves the Cannon from (6, 2) to (6, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 219,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cannon",
+            "line": 203
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-cannon-and-tries-to-jump-with-zero-screens-(illegal)",
+        "keyword": "Scenario",
+        "line": 225,
+        "name": "Red moves the Cannon and tries to jump with zero screens (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Cannon",
+                      "(6, 2)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Guard",
+                      "(6, 8)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 227,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 235,
+            "name": "Red moves the Cannon from (6, 2) to (6, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 237,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cannon",
+            "line": 223
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-cannon-and-tries-to-jump-with-more-than-one-screen-(illegal)",
+        "keyword": "Scenario",
+        "line": 243,
+        "name": "Red moves the Cannon and tries to jump with more than one screen (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Cannon",
+                      "(6, 2)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Soldier",
+                      "(6, 4)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Soldier",
+                      "(6, 5)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Guard",
+                      "(6, 8)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 245,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 257,
+            "name": "Red moves the Cannon from (6, 2) to (6, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 259,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cannon",
+            "line": 241
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-elephant-2-step-diagonal-with-a-clear-midpoint-(legal)",
+        "keyword": "Scenario",
+        "line": 271,
+        "name": "Red moves the Elephant 2-step diagonal with a clear midpoint (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 273,
+            "name": "the board is empty except for a Red Elephant at (3, 3)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 275,
+            "name": "Red moves the Elephant from (3, 3) to (5, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 277,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Elephant",
+            "line": 269
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-elephant-and-tries-to-cross-the-river-(illegal)",
+        "keyword": "Scenario",
+        "line": 283,
+        "name": "Red moves the Elephant and tries to cross the river (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 285,
+            "name": "the board is empty except for a Red Elephant at (5, 3)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 287,
+            "name": "Red moves the Elephant from (5, 3) to (7, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 289,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Elephant",
+            "line": 281
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-elephant-and-its-midpoint-is-blocked-(illegal)",
+        "keyword": "Scenario",
+        "line": 295,
+        "name": "Red moves the Elephant and its midpoint is blocked (Illegal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Elephant",
+                      "(3, 3)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Rook",
+                      "(4, 4)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 297,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 305,
+            "name": "Red moves the Elephant from (3, 3) to (5, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 307,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Elephant",
+            "line": 293
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-soldier-forward-before-crossing-the-river-(legal)",
+        "keyword": "Scenario",
+        "line": 319,
+        "name": "Red moves the Soldier forward before crossing the river (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 321,
+            "name": "the board is empty except for a Red Soldier at (3, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 323,
+            "name": "Red moves the Soldier from (3, 5) to (4, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 325,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Soldier",
+            "line": 317
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-soldier-and-tries-to-move-sideways-before-crossing-(illegal)",
+        "keyword": "Scenario",
+        "line": 331,
+        "name": "Red moves the Soldier and tries to move sideways before crossing (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 333,
+            "name": "the board is empty except for a Red Soldier at (3, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 335,
+            "name": "Red moves the Soldier from (3, 5) to (3, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 337,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Soldier",
+            "line": 329
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-soldier-sideways-after-crossing-the-river-(legal)",
+        "keyword": "Scenario",
+        "line": 343,
+        "name": "Red moves the Soldier sideways after crossing the river (Legal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 345,
+            "name": "the board is empty except for a Red Soldier at (6, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 347,
+            "name": "Red moves the Soldier from (6, 5) to (6, 4)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 349,
+            "name": "the move is legal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Soldier",
+            "line": 341
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-moves-the-soldier-and-attempts-to-move-backward-after-crossing-(illegal)",
+        "keyword": "Scenario",
+        "line": 355,
+        "name": "Red moves the Soldier and attempts to move backward after crossing (Illegal)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 357,
+            "name": "the board is empty except for a Red Soldier at (6, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 359,
+            "name": "Red moves the Soldier from (6, 5) to (5, 5)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 361,
+            "name": "the move is illegal",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Soldier",
+            "line": 353
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-captures-opponent's-general-and-wins-immediately-(legal)",
+        "keyword": "Scenario",
+        "line": 373,
+        "name": "Red captures opponent's General and wins immediately (Legal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Rook",
+                      "(5, 5)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black General",
+                      "(5, 8)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 375,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 383,
+            "name": "Red moves the Rook from (5, 5) to (5, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 385,
+            "name": "Red wins immediately",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Winning",
+            "line": 371
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "chinese-chess-(象棋)-rules;red-captures-a-non-general-piece-and-the-game-continues-(legal)",
+        "keyword": "Scenario",
+        "line": 391,
+        "name": "Red captures a non-General piece and the game continues (Legal)",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Piece",
+                      "Position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Red Rook",
+                      "(5, 5)"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Black Cannon",
+                      "(5, 8)"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 393,
+            "name": "the board has:",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 401,
+            "name": "Red moves the Rook from (5, 5) to (5, 8)",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 403,
+            "name": "the game is not over just from that capture",
+            "match": {
+              "location": "features\\step_definitions\\chess_steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Winning",
+            "line": 389
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "chinese-chess-(象棋)-rules",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Chinese Chess (象棋) Rules",
+    "tags": [],
+    "uri": "features\\Chess.feature"
+  }
+]

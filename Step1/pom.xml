@@ -11,6 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>7.14.0</cucumber.version>
         <junit.jupiter.version>5.9.3</junit.jupiter.version>
+        <cucumber.plugin>json:target/cucumber.json</cucumber.plugin>
     </properties>
     <dependencies>
         <dependency>
@@ -48,6 +49,9 @@
                     <includes>
                         <include>**/RunCucumberTest.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <cucumber.plugin>html:target/order-cucumber-report.html</cucumber.plugin>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

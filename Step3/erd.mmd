@@ -1,0 +1,7 @@
+erDiagram
+  PLAYER ||--o{ GAME : "參與"
+  GAME ||--|{ MOVE : "包含"
+  GAME ||--|| BOARD : "擁有"
+  BOARD ||--o{ PIECE : "擁有"
+  PLAYER ||--o{ PIECE : "擁有"
+  MOVE }|--|| PIECE : "移動" 

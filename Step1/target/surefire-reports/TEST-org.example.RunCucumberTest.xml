@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.RunCucumberTest" time="0.168" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.RunCucumberTest" time="0.428" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="TW"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.15\bin"/>
-    <property name="sun.java.command" value="C:\Users\USER\AppData\Local\Temp\surefire5825048309856519694\surefirebooter-20250702200751734_3.jar C:\Users\USER\AppData\Local\Temp\surefire5825048309856519694 2025-07-02T20-07-51_210-jvmRun1 surefire-20250702200751734_1tmp surefire_0-20250702200751734_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\USER\AppData\Local\Temp\surefire7798942950609833213\surefirebooter-20250702204348535_3.jar C:\Users\USER\AppData\Local\Temp\surefire7798942950609833213 2025-07-02T20-43-48_041-jvmRun1 surefire-20250702204348535_1tmp surefire_0-20250702204348535_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="org.example.RunCucumberTest"/>
     <property name="surefire.test.class.path" value="E:\Homework\AI-100x-SE-Join-Quest\Step1\target\test-classes;E:\Homework\AI-100x-SE-Join-Quest\Step1\target\classes;C:\Users\USER\.m2\repository\io\cucumber\cucumber-java\7.14.0\cucumber-java-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-core\7.14.0\cucumber-core-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin\7.14.0\cucumber-gherkin-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.14.0\cucumber-gherkin-messages-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\USER\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\USER\.m2\repository\io\cucumber\tag-expressions\5.0.6\tag-expressions-5.0.6.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\datatable\7.14.0\datatable-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-plugin\7.14.0\cucumber-plugin-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\docstring\7.14.0\docstring-7.14.0.jar;C:\Users\USER\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\USER\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\USER\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.14.0\cucumber-junit-platform-engine-7.14.0.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-suite\1.9.3\junit-platform-suite-1.9.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-suite-api\1.9.3\junit-platform-suite-api-1.9.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.9.3\junit-platform-suite-engine-1.9.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.9.3\junit-platform-suite-commons-1.9.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\USER\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;"/>
@@ -31,9 +31,10 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\USER\AppData\Local\Temp\surefire5825048309856519694\surefirebooter-20250702200751734_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\USER\AppData\Local\Temp\surefire7798942950609833213\surefirebooter-20250702204348535_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="cucumber.plugin" value="html:target/order-cucumber-report.html"/>
     <property name="java.runtime.version" value="17.0.15+9-LTS-241"/>
     <property name="user.name" value="Charis"/>
     <property name="path.separator" value=";"/>
@@ -58,7 +59,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Buying 12 socks priced at $100 each" classname="Double 11 Discount Promotion" time="0.071"/>
-  <testcase name="Buying 27 socks priced at $100 each" classname="Double 11 Discount Promotion" time="0.002"/>
-  <testcase name="Buying 1 unit each of 10 different products (A to J), each priced at $100" classname="Double 11 Discount Promotion" time="0.007"/>
+  <testcase name="Single product without promotions" classname="E-commerce Order Pricing Promotions" time="0.08">
+    <system-out><![CDATA[bogoCosmeticsActive=false, threshold=null, discount=null
+]]></system-out>
+  </testcase>
+  <testcase name="Threshold discount applies when subtotal reaches 1000" classname="E-commerce Order Pricing Promotions" time="0.006">
+    <system-out><![CDATA[bogoCosmeticsActive=false, threshold=1000, discount=100
+]]></system-out>
+  </testcase>
+  <testcase name="Buy-one-get-one for cosmetics - multiple products" classname="E-commerce Order Pricing Promotions" time="0.012">
+    <system-out><![CDATA[bogoCosmeticsActive=true, threshold=null, discount=null
+下單: 口紅, category=[cosmetics] bytes=[99, 111, 115, 109, 101, 116, 105, 99, 115], 數量=1 => 實際收到=2
+下單: 粉底液, category=[cosmetics] bytes=[99, 111, 115, 109, 101, 116, 105, 99, 115], 數量=1 => 實際收到=2
+]]></system-out>
+  </testcase>
+  <testcase name="Buy-one-get-one for cosmetics - same product twice" classname="E-commerce Order Pricing Promotions" time="0.009">
+    <system-out><![CDATA[bogoCosmeticsActive=true, threshold=null, discount=null
+下單: 口紅, category=[cosmetics] bytes=[99, 111, 115, 109, 101, 116, 105, 99, 115], 數量=2 => 實際收到=3
+]]></system-out>
+  </testcase>
+  <testcase name="Buy-one-get-one for cosmetics - mixed categories" classname="E-commerce Order Pricing Promotions" time="0.003">
+    <system-out><![CDATA[bogoCosmeticsActive=true, threshold=null, discount=null
+下單: 襪子, category=[apparel] bytes=[97, 112, 112, 97, 114, 101, 108], 數量=1 => 實際收到=1
+下單: 口紅, category=[cosmetics] bytes=[99, 111, 115, 109, 101, 116, 105, 99, 115], 數量=1 => 實際收到=2
+]]></system-out>
+  </testcase>
+  <testcase name="Multiple promotions stacked" classname="E-commerce Order Pricing Promotions" time="0.006">
+    <system-out><![CDATA[bogoCosmeticsActive=true, threshold=1000, discount=100
+下單: T-shirt, category=[apparel] bytes=[97, 112, 112, 97, 114, 101, 108], 數量=3 => 實際收到=3
+下單: 口紅, category=[cosmetics] bytes=[99, 111, 115, 109, 101, 116, 105, 99, 115], 數量=1 => 實際收到=2
+]]></system-out>
+  </testcase>
 </testsuite>
